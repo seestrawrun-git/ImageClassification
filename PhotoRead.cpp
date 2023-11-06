@@ -50,7 +50,7 @@ void APhotoRead::CheckForNewImages()
 		{
 			FString ClassName;
 			FString BaseFilename = FPaths::GetBaseFilename(File); // Gets the filename without extension
-			BaseFilename.Split(TEXT("-"), nullptr, &ClassName); // Assumes the class name is appended after "_-"
+			BaseFilename.Split(TEXT("-"), nullptr, &ClassName); // Assumes the class name is appended after "-"
 
 			// Find the index corresponding to the ClassName
 			int32 ActorIndex = GetActorIndexToSpawn(ClassName);
